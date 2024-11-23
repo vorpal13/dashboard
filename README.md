@@ -1,6 +1,5 @@
 ### README.md
 
-````markdown
 # Dashboard
 
 Дашборд для статистики сайтов с использованием React.js + json-server
@@ -17,7 +16,6 @@
    ```bash
    git clone https://github.com/vorpal13/dashboard.git
    ```
-````
 
 2. **Перейдите в папку проекта**
 
