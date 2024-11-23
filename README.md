@@ -1,50 +1,74 @@
-# React + TypeScript + Vite
+### README.md
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+````markdown
+# Dashboard
 
-Currently, two official plugins are available:
+Дашборд для статистики сайтов с использованием React.js + json-server
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Требования
 
-## Expanding the ESLint configuration
+- Node.js (рекомендуется версия 16 или выше)
+- npm (устанавливается вместе с Node.js)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Как запустить проект
 
-- Configure the top-level `parserOptions` property like this:
+1. **Клонируйте репозиторий**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+   ```bash
+   git clone https://github.com/vorpal13/dashboard.git
+   ```
+````
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. **Перейдите в папку проекта**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   ```bash
+   cd dashboard
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. **Установите зависимости**
+
+   Выполните следующую команду для установки всех необходимых пакетов:
+
+   ```bash
+   npm install
+   ```
+
+4. **Запустите приложение**
+
+   Откройте **два терминала**:
+
+   - В первом терминале запустите сервер:
+
+     ```bash
+     npm run server
+     ```
+
+   - Во втором терминале запустите приложение в режиме разработки:
+
+     ```bash
+     npm run dev
+     ```
+
+5. **Откройте приложение**
+
+   После выполнения вышеуказанных шагов откройте браузер и перейдите по адресу:
+
+   ```
+   http://localhost:5173
+   ```
+
+## Структура проекта
+
+- **app/**: Основные точки входа и конфигурация приложения.
+- **assets/**: Содержит изображения и другие медиа-файлы.
+- **components/**: Содержит переиспользуемые UI-компоненты.
+- **layout/**: Компоненты макета приложения.
+- **pages/**: Содержит страницы приложения.
+- **services/**: Логика для работы с API.
+- **styles/**: Глобальные стили.
+- **utils/**: Вспомогательные функции и утилиты.
+
+## Основные команды
+
+- `npm run server`: Запускает сервер API.
+- `npm run dev`: Запускает приложение в режиме разработки.
