@@ -1,0 +1,71 @@
+{
+  "sites": [
+    {
+      "id": "1",
+      "name": "Site A",
+      "url": "https://site-a.com",
+      "description": "This is Site A",
+      "statistics": [
+        {
+          "date": "2024-11-01",
+          "visits": 120,
+          "pageviews": 340
+        },
+        {
+          "date": "2024-11-02",
+          "visits": 150,
+          "pageviews": 410
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Site B",
+      "url": "https://site-b.com",
+      "description": "This is Site B",
+      "statistics": [
+        {
+          "date": "2024-11-01",
+          "visits": 90,
+          "pageviews": 230
+        },
+        {
+          "date": "2024-11-02",
+          "visits": 110,
+          "pageviews": 300
+        }
+      ]
+    },
+    {
+      "name": "qwdcqwdcqw",
+      "url": "https://google.com",
+      "description": "cqwecqwe",
+      "statistics": [
+        {
+          "date": "2024-05-24",
+          "visits": "122",
+          "pageviews": "323"
+        },
+        {
+          "date": "2024-06-23",
+          "visits": "424",
+          "pageviews": "434"
+        }
+      ],
+      "id": "83f2"
+    },
+    {
+      "name": "new site",
+      "url": "https://kseokf.com",
+      "description": "ioecrjoqwc",
+      "statistics": [
+        {
+          "date": "2024.05.05",
+          "visits": "14",
+          "pageviews": "42"
+        }
+      ],
+      "id": "99c9"
+    }
+  ]
+}
