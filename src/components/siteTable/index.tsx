@@ -71,6 +71,7 @@ export const SiteTable: FC = () => {
           <UiButton
             icon={<EditOutlined />}
             onClick={() => {
+              console.log('record', record)
               setRecordToEdit(record)
               setIsDrawerOpen(true)
             }}
@@ -116,10 +117,9 @@ export const SiteTable: FC = () => {
                     key: 'date',
                     sorter: (a, b) =>
                       new Date(a.date).getTime() - new Date(b.date).getTime(),
-                    filters: record.statistics.map((stat) => ({
-                      text: stat.date,
-                      value: stat.date,
-                    })),
+                    filters: record.statistics
+                      ? createFilters(record.statistics, 'date')
+                      : [],
                     onFilter: (value, record) => record.date === value,
                   },
                   {

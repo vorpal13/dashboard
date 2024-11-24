@@ -1,71 +1,60 @@
 {
   "sites": [
     {
-      "id": "1",
-      "name": "Site A",
-      "url": "https://site-a.com",
-      "description": "This is Site A",
-      "statistics": [
-        {
-          "date": "2024-11-01",
-          "visits": 120,
-          "pageviews": 340
-        },
-        {
-          "date": "2024-11-02",
-          "visits": 150,
-          "pageviews": 410
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "name": "Site B",
-      "url": "https://site-b.com",
-      "description": "This is Site B",
-      "statistics": [
-        {
-          "date": "2024-11-01",
-          "visits": 90,
-          "pageviews": 230
-        },
-        {
-          "date": "2024-11-02",
-          "visits": 110,
-          "pageviews": 300
-        }
-      ]
-    },
-    {
-      "name": "qwdcqwdcqw",
+      "name": "Google",
       "url": "https://google.com",
-      "description": "cqwecqwe",
+      "description": "Google Search Site",
       "statistics": [
         {
-          "date": "2024-05-24",
-          "visits": "122",
-          "pageviews": "323"
+          "date": "2024-11-01",
+          "visits": "2313",
+          "pageviews": "24214"
         },
         {
-          "date": "2024-06-23",
-          "visits": "424",
-          "pageviews": "434"
+          "date": "2024-11-11",
+          "visits": "213",
+          "pageviews": "123"
+        },
+        {
+          "date": "2024-11-24",
+          "visits": "123",
+          "pageviews": "123"
+        },
+        {
+          "date": "2024-11-25",
+          "visits": "43",
+          "pageviews": "232"
         }
       ],
-      "id": "83f2"
+      "id": "a8c3"
     },
     {
-      "name": "new site",
-      "url": "https://kseokf.com",
-      "description": "ioecrjoqwc",
+      "name": "Яндекс",
+      "url": "https://yandex.com",
+      "description": "Yandex Site",
       "statistics": [
         {
-          "date": "2024.05.05",
-          "visits": "14",
-          "pageviews": "42"
+          "date": "2024-11-01",
+          "visits": "434",
+          "pageviews": "2424"
+        },
+        {
+          "date": "2024-11-05",
+          "visits": "213",
+          "pageviews": "123"
+        },
+        {
+          "date": "2024-11-12",
+          "visits": "124",
+          "pageviews": "124"
+        },
+        {
+          "date": "2024-11-25",
+          "visits": "324",
+          "pageviews": "234"
         }
       ],
-      "id": "99c9"
+      "id": "750b"
     }
   ]
 }

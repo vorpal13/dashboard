@@ -1,20 +1,29 @@
-import { useState, useEffect } from 'react';
-import { message } from 'antd';
-import { useGetSitesListQuery, useDeleteSiteMutation } from '@/services/site/api';
-import { ISite } from '@/utils/types/site';
+import { useState, useEffect } from 'react'
+import { message } from 'antd'
+import {
+  useGetSitesListQuery,
+  useDeleteSiteMutation,
+} from '@/services/site/api'
+import { ISite } from '@/utils/types/site'
 
 export const useSiteTable = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [recordToEdit, setRecordToEdit] = useState<ISite | null>(null);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+  const [recordToEdit, setRecordToEdit] = useState<ISite | null>(null)
 
-  const { data, isLoading, isError } = useGetSitesListQuery();
-  const { mutate: deleteSite } = useDeleteSiteMutation();
+  const { data, isLoading, isError } = useGetSitesListQuery()
+  const { mutate: deleteSite } = useDeleteSiteMutation()
 
   useEffect(() => {
     if (isError) {
-      message.error('Произошла ошибка при получении списка сайтов');
+      message.error('Произошла ошибка при получении списка сайтов')
     }
-  }, [isError]);
+  }, [isError])
+
+  useEffect(() => {
+    if (!isDrawerOpen) {
+      setRecordToEdit(null)
+    }
+  }, [isDrawerOpen])
 
   return {
     data,
@@ -24,5 +33,5 @@ export const useSiteTable = () => {
     setIsDrawerOpen,
     recordToEdit,
     setRecordToEdit,
-  };
-};
+  }
+}

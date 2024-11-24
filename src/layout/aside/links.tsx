@@ -1,10 +1,10 @@
-import { GlobalOutlined, HomeOutlined, InfoCircleOutlined } from '@ant-design/icons';
-import { ReactNode } from 'react';
+import { GlobalOutlined, HomeOutlined } from '@ant-design/icons'
+import { ReactNode } from 'react'
 
 export interface MenuLink {
-  path: string;
-  label: string;
-  icon: ReactNode;
+  path: string
+  label: string
+  icon: ReactNode
 }
 
 export const links: MenuLink[] = [
@@ -18,9 +18,4 @@ export const links: MenuLink[] = [
     label: 'Сайты',
     icon: <GlobalOutlined />,
   },
-  {
-    path: '#',
-    label: 'О компании',
-    icon: <InfoCircleOutlined />,
-  },
-];
+]

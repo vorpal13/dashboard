@@ -8,7 +8,7 @@ type Props = {
   children: ReactNode
 }
 
-export const queryClient = new QueryClient()
+const queryClient = new QueryClient()
 
 export const AppProviders = ({ children }: Props) => {
   return (

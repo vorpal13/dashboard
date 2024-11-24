@@ -1,25 +1,34 @@
-import { FC, useCallback } from 'react'
-import { Col, Drawer, Form, Input, Row, Space } from 'antd'
+import { FC } from 'react'
+import { Col, Drawer, Form, Row, Space, DatePicker, Input } from 'antd'
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons'
 import { useSiteDrawer } from './useSiteDrawer'
 import { SiteDrawerProps } from './SiteDrawer.types'
 import { UiButton } from '../ui/button'
+import dayjs from 'dayjs'
+import { ISite } from '@/utils/types/site'
 
 export const SiteDrawer: FC<SiteDrawerProps> = ({
   isDrawerOpen,
   setIsDrawerOpen,
   recordToEdit,
 }) => {
-  const onClose = useCallback(() => setIsDrawerOpen(false), [])
+  const [form] = Form.useForm<Omit<ISite, 'id'>>()
 
-  const { form, onSubmit } = useSiteDrawer({
+  const onClose = () => {
+    form.resetFields()
+    setIsDrawerOpen(false)
+  }
+
+  const { onSubmit } = useSiteDrawer({
     recordToEdit,
     isDrawerOpen,
     onClose,
+    form,
   })
 
   return (
     <Drawer
+      forceRender
       title={recordToEdit ? 'Редактирование сайта' : 'Добавление нового сайта'}
       width={720}
       onClose={onClose}
@@ -80,7 +89,6 @@ export const SiteDrawer: FC<SiteDrawerProps> = ({
           </Col>
         </Row>
 
-        {/* Поля для статистики */}
         <Form.List name='statistics'>
           {(fields, { add, remove }) => (
             <>
@@ -95,7 +103,12 @@ export const SiteDrawer: FC<SiteDrawerProps> = ({
                         { required: true, message: 'Пожалуйста, укажите дату' },
                       ]}
                     >
-                      <Input placeholder='YYYY-MM-DD' />
+                      <DatePicker
+                        maxDate={dayjs()}
+                        format='YYYY-MM-DD'
+                        style={{ width: '100%' }}
+                        placeholder='Выберите дату'
+                      />
                     </Form.Item>
                   </Col>
                   <Col span={6}>
@@ -164,6 +177,7 @@ export const SiteDrawer: FC<SiteDrawerProps> = ({
             </>
           )}
         </Form.List>
+        <UiButton className='invisible' htmlType='submit' />
       </Form>
     </Drawer>
   )

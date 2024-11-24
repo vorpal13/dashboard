@@ -1,5 +1,6 @@
 import axiosInstance from '@/utils/axios/axiosInstance'
 import { ISite } from '@/utils/types/site'
+import dayjs from 'dayjs'
 
 export async function getSiteList() {
   const res = await axiosInstance.get<ISite[]>('sites')
@@ -19,7 +20,7 @@ export async function createSite(site: Omit<ISite, 'id'>) {
       ? site.statistics
       : [
           {
-            date: new Date().toISOString().split('T')[0],
+            date: dayjs().format('YYYY-MM-DD'),
             pageviews: 0,
             visits: 0,
           },
