@@ -62,6 +62,10 @@ export const SiteDrawer: FC<SiteDrawerProps> = ({
               label='Url'
               rules={[
                 { required: true, message: 'Пожалуйста, введите URL сайта' },
+                {
+                  pattern: /\.(com|uz|ru)$/,
+                  message: 'URL должен заканчиваться на .com, .uz, или .ru.',
+                },
               ]}
             >
               <Input
