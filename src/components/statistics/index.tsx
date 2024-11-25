@@ -38,7 +38,7 @@ export const Statistics = ({ data, isLoading }: Props) => {
   ]
 
   return (
-    <Row gutter={16} style={{ width: '100%', marginBottom: 16 }}>
+    <Row gutter={16} style={{ marginBottom: 16 }}>
       {stats.map(({ title, value }, index) => (
         <Col key={index} span={6}>
           <Spin spinning={isLoading}>
